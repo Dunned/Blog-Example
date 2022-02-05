@@ -1,0 +1,550 @@
+:root{
+    --verde:#47cfac;
+}
+
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html{
+    font-size: 62.5%;
+    font-family: 'Roboto', sans-serif;
+    font-family: 'Roboto Mono', monospace;
+    font-family: 'Roboto Slab', serif;
+}
+
+
+
+ul{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+a{
+    display: inline-block;
+    text-decoration: none;
+    color: black;
+}
+
+.header{
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: "redes"
+                         "nav";
+}
+
+.icons{
+    width: 100%;
+    margin: 0 auto;
+    background-color: var(--verde);
+}
+
+.contenedor-redes-sociales{
+    width: 80%;
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: end;
+    padding: 1.2rem;
+    grid-area: redes;
+}
+
+.contenedor-redes-sociales li{
+    padding: 10px;
+    margin: 0 10px;
+}
+
+.contenedor-redes-sociales li a{
+    font-size: 30px;
+    color: white;
+}
+
+nav{
+    width: 80%;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 1.2rem;
+    grid-area: nav;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: "logo perfil";
+    align-items: flex-end;
+    
+}
+
+.contenedorImagen{
+    grid-area: logo;
+}
+
+.contenedorImagen a img{
+   width: 100%;
+   max-width: 300px;
+   min-width: 200px;
+}
+
+.perfil{
+    grid-area: perfil;
+    justify-self: flex-end;
+    align-self: center;
+    margin: 1rem;
+}
+
+.boton-perfil{
+    padding: 1rem;
+    border-radius: 5px;
+    font-size: 1.8rem;
+    font-weight: bold;
+    text-decoration: underline;
+    font-family: 'Roboto Mono', monospace;
+}
+
+.fondo{
+    background-image: url(../assets/img/Cover.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    max-width: 100%;
+}
+
+.home-main section{
+    background-image: url(../assets/img/fondoNav.jpg);
+    width: 100%;
+    height: 80vh;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: grid;
+    grid-template-columns: 70%;
+    place-content: center;
+    place-items: center;
+    gap: 5rem;
+}
+
+.home-main section h1{
+    padding: 2rem;
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 4rem;
+    text-align: center;
+}
+
+.home-main section button{
+    background-color: var(--verde);
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 10px;
+    font-weight: bold;
+    font-size: 1.8rem;
+}
+
+.home-main section button a{
+    color: white;
+}
+
+.home-blogs{
+    width: 100%;
+}
+
+.contenedor-entrada-uno{
+    width: 100%;
+    background-color: rgb(218, 198, 194);
+}
+
+
+.entrada-uno{
+    width: 80%;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 3rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+    justify-items: start;
+    align-items: flex-start;
+    gap: 4rem;
+}
+
+.entrada-uno div img{
+    max-width: 100%;
+}
+
+.entrada-uno div h2{
+    font-size: 2.4rem;
+    margin-bottom: 2rem;
+}
+
+.detalle-uno{
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.detalle-uno h2{
+    font-size: 2.4rem;
+    font-family: 'Roboto slab', monospace;
+}
+
+.detalle-uno p{
+    font-size: 1.4rem;
+    font-family: 'Roboto Mono', monospace;
+    text-align: justify;
+}
+
+.boton{
+    margin: 3rem 0;
+    padding: 1rem 1.5rem;
+    border: 2px solid var(--verde);
+    font-size: 1.2rem;
+    font-weight: 500;
+    font-family: 'Roboto', monospace;
+    text-align: center;
+    transition: all 0.2s ease-in;
+}
+
+.boton:hover{
+    background: black;
+    color: var(--verde);
+}
+
+.detalle-uno .boton{
+    display: inline-block;
+    width: 10rem;
+}
+
+.entrada{
+    padding: 2rem;
+    background:rgba(199, 247, 239, 0.623);
+    border-radius: 10px;
+}
+
+.entradas{
+    padding: 4rem;
+    border-radius: 10px;
+    width: 80%;
+    max-width: 1000px;
+    height: auto;
+    margin: 0 auto; 
+    display: grid;
+    margin-top: 2rem;
+    grid-template-columns: repeat(auto-fit,minmax(80px,280px));
+    column-gap: 4rem;
+    row-gap: 2rem;
+    place-content: center;
+}
+
+
+.entradas img{
+    display: block;
+    max-width: 100%;
+    height: 20rem;
+    object-fit: cover;
+    margin: 0 auto;
+}
+
+
+
+
+.entrada h2{
+    font-size: 1.8rem;
+    padding: 2rem 0;
+    font-family: 'Roboto Mono', monospace;
+}
+
+.entrada p{
+    text-align: justify;
+    font-size: 1.2rem;
+    line-height: 2.2rem;
+}
+
+.entrada .boton{
+    margin-top: 1.5rem;
+}
+
+.titulo-entradas{
+    text-align: center;
+    font-size: 2.4rem;
+    margin: 4rem 0;
+    border-bottom: 2px solid var(--verde);
+    width: 60%;
+    margin:  0 auto;
+    padding: 1.5rem;
+}
+
+body{
+    background-image: url(../assets/img/19366.jpg);
+    background-position: center center;
+    background-size: cover;
+    
+}
+
+footer{
+    margin-top: 3rem;
+    width: 100%;
+    height: 10rem;
+    background-color:rgb(61, 58, 58);
+}
+
+div.linea-verde{
+    height: 30%;
+    background-color: var(--verde);
+}
+
+div.pie-pagina{
+    height: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer p{
+    text-align: center;
+    font-size: 1.5rem;
+    color: white;
+    font-weight: bold;
+    font-family: 'Roboto Slab', serif;
+}
+
+
+.main-blog{
+    width: 100%;
+}
+
+.contenedor-blog{
+    width: 80%;
+    margin: 0 auto;
+}
+
+picture.imagen-principal{
+    width: 100%;
+    height: auto;
+}
+
+picture.imagen-principal img{
+    display: block;
+    margin: 0 auto;
+    width: 80%;
+    height: 50rem;
+    object-fit: cover;
+    padding: 5rem;
+}
+
+section.contenido-blog{
+    margin: 0 auto;
+    width: 60%;
+    padding: 5rem;
+    padding-top: 0;
+}
+
+
+
+section.contenido-blog h2{
+    font-family: 'Roboto', sans-serif;
+    margin-bottom: 1rem;
+    padding: 1rem;
+    padding-left: 0;
+    border-bottom: 1px solid black;
+}
+
+section.contenido-blog h3{
+    font-family: 'Roboto mono', sans-serif;
+    font-size: 2.8rem;
+    font-weight: bold;
+    padding: 2rem 0;
+}
+
+section.contenido-blog p{
+    text-align: justify;
+    font-family: 'Roboto mono', sans-serif;
+    font-size: 1.2rem;
+}
+
+.compartir{
+    width: 100%;
+    background-color: rgb(235, 222, 222);
+}
+
+.compartir-grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(100px,400px));
+    place-content: center;
+    column-gap: 10rem;
+    row-gap: 2rem;
+    padding: 4rem;
+}
+
+.compartir-grid > div{
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.compartir-grid div picture img{
+    display: block;
+    max-width: 60%;
+    height: auto;
+    margin: 0 auto;
+    object-fit: cover;
+}
+
+.compartir-grid div div h4{
+    font-size: 1.8rem;
+    font-weight: 500;
+    text-decoration: underline;
+    margin-bottom: 1rem;
+}
+
+.compartir-grid div div p{
+    text-align: justify;
+    font-size: 1.3rem;
+}
+
+
+.contenedor-perfil{
+    width: 100%;
+    height:  auto;
+    background-color: bisque;
+}
+
+.contenedor-informacion{
+    width: 80%;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 2rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+    place-content: center;
+    place-items: center;
+    gap: 2rem;
+}
+
+.contenedor-informacion img{
+    display: block;
+    max-width: 60%;
+    border-radius: 50%;
+    margin: 0 auto;
+}
+
+.contenedor-informacion section h2{
+    font-size: 2.6rem;
+    margin-bottom: 1rem;
+    font-family: 'Roboto mono';
+}
+
+.contenedor-informacion section p{
+    font-size: 1.5rem;
+    font-family: 'Roboto';
+    text-align: justify;
+}
+
+.proyectos{
+    width: 80%;
+    max-width: 1000px;
+    margin: 5rem auto;
+}
+
+.proyectos h2{
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 2.8rem;
+    padding-bottom: 1rem;
+    border-bottom: 3px solid black;
+}
+
+section .listado-proyectos{
+    margin-top: 4rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
+    grid-auto-rows: minmax(200px,300px);
+    column-gap: 5rem;
+    row-gap: 1rem;
+}
+
+section .listado-proyectos article{
+    height: auto;
+    overflow: hidden;
+}
+
+section .listado-proyectos img{
+    display: block;
+    width: 100%;
+    height: 50%;
+    object-fit: cover;
+    margin: 0 auto;
+}
+
+section .listado-proyectos h3{
+    margin-top: .5rem;
+    font-size: 2.4rem;
+}
+
+section .listado-proyectos p{
+    margin-top: .8rem;
+    font-size: 1.2rem;
+    text-align: justify;
+    line-height: 2rem;
+}
+
+
+@media (max-width: 600px) {
+    nav{
+        grid-template-areas: "logo logo"
+                            "perfil perfil";
+    }
+
+    .perfil{
+        justify-self: center
+    }
+    .contenedor-redes-sociales{
+        width: 100%;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .contenedor-entrada-uno{
+        padding-top: 2rem;
+    }
+
+    .entrada-uno{
+        padding: 0;
+        gap: 0;
+    }
+
+    .entradas{
+        width: 100%;
+    }
+
+    .detalle-uno{
+        margin-top: 0rem;
+    }
+
+    .contenedor-blog{
+        width: 100%;
+    }
+
+    section.contenido-blog{
+        width: 99%;
+    }
+
+    .compartir-grid{
+        row-gap: 2rem;
+    }
+
+    picture.imagen-principal img{
+        padding: 1rem;
+    }
+}
+
+
+
+
+
